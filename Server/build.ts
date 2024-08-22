@@ -10,4 +10,5 @@ export default defineConfig({
   platform: 'node',
   tsconfig: 'tsconfig.json',
   keepNames: true,
+  noExternal: ['fs'],
 });
