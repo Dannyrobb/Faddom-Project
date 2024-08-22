@@ -11,7 +11,9 @@ export default [
       'node_modules/*',
       'node_modules',
       'node_modules/**/*',
-
+      'dist/*',
+      'dist/**/*',
+      'dist',
       '.database',
       '.database/*',
     ],
