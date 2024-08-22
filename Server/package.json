@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "dotenv -e .env -- ts-node-dev --transpile-only ./src/main.ts",
     "build": "tsup --config build.ts",
-    "start": "dotenv -e .env -- node ./dist/main.js",
+    "start": "nodemon ./src/main.ts",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "pnpm dlx prettier --config .prettierrc 'src/**/*.ts' --write"
@@ -32,6 +32,7 @@
     "dotenv": "^16.4.5",
     "dotenv-cli": "^7.4.2",
     "fastify": "^4.28.1",
+    "nodemon": "^3.1.4",
     "zod": "^3.21.4"
   },
   "author": "",
