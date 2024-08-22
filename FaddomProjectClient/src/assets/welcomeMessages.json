@@ -1,0 +1,6 @@
+{
+  "welcomeTitle": "Welcome to AWS CPU Usage Monitor",
+  "welcomeSubtitle": "Track and visualize your AWS EC2 instance's CPU performance with ease.",
+  "welcomeInstructions": "To get started, enter the IP address of your EC2 instance along with the desired time range. Click the \"Fetch Data\" button to retrieve and visualize the CPU usage data. You can adjust the time interval for more granular insights.",
+  "welcomeNote": "Please ensure that your AWS credentials are correctly configured, and that your instance has the necessary CloudWatch permissions."
+}
