@@ -9,3 +9,7 @@ export const AWSendpoint = async (
 
   reply.send(awsRes);
 };
+
+export const test = async (request: FastifyRequest, reply: FastifyReply) => {
+  reply.send('hello');
+};
