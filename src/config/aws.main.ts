@@ -1,7 +1,7 @@
 import { cloudwatch } from './aws.config';
 import { getInstanceIdFromIp } from './aws.instance';
 
-interface GetCpuUsageParams {
+export interface GetCpuUsageParams {
   ipAddress: string;
   startTime: string;
   endTime: string;
