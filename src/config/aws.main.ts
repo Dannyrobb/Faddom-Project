@@ -55,10 +55,18 @@ export async function getCpuUsage({
     if (data?.MetricDataResults) {
       const organizedData = data.MetricDataResults[0]?.Timestamps?.map(
         (timestamp, index) => {
-          return {
-            time: new Date(timestamp),
-            value: data.MetricDataResults[0]?.Values[index],
-          };
+          if (data.MetricDataResults) {
+            if (
+              data.MetricDataResults.length > 0 &&
+              data.MetricDataResults[0] &&
+              data.MetricDataResults[0].Values
+            ) {
+              return {
+                time: new Date(timestamp),
+                value: data.MetricDataResults[0]?.Values[index],
+              };
+            }
+          }
         },
       );
       return JSON.stringify(organizedData, null, 2);
