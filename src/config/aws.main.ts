@@ -18,6 +18,14 @@ export async function getCpuUsage({
     throw new Error('Invalid input parameters. All parameters are required.');
   }
 
+  console.log(
+    'aws main incoming params: ',
+    ipAddress,
+    startTime,
+    endTime,
+    interval,
+  );
+
   try {
     const instanceIdResponse = await getInstanceIdFromIp(ipAddress);
 
@@ -51,7 +59,7 @@ export async function getCpuUsage({
     };
 
     const data = await cloudwatch.getMetricData(params).promise();
-
+    console.log(data);
     if (data?.MetricDataResults) {
       const organizedData = data.MetricDataResults[0]?.Timestamps?.map(
         (timestamp, index) => {
