@@ -19,6 +19,7 @@ fastify.register(AWSroutes);
 
 fastify.setErrorHandler(
   (error: Error, request: FastifyRequest, reply: FastifyReply) => {
+    console.log(error);
     fastify.log.error(error);
     reply.status(500).send({ error: 'error' });
   },
